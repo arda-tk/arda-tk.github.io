@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music — Arda Kersü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="mark">A<span>.</span>V</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="papers.html">Papers</a>
+    <a href="music.html" class="active">Music</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<div class="shell">
+  <aside class="spine">
+    <div class="spine-top">
+      <a href="index.html" class="mark">Arda<span>Kersü</span></a>
+      <nav class="spine-nav">
+        <a href="index.html"><span class="idx">00</span>Home</a>
+        <a href="projects.html"><span class="idx">01</span>Projects</a>
+        <a href="papers.html"><span class="idx">02</span>Papers</a>
+        <a href="music.html" class="active"><span class="idx">03</span>Music</a>
+        <a href="contact.html"><span class="idx">04</span>Contact</a>
+      </nav>
+    </div>
+    <div class="spine-bottom">
+      İzmir, Turkey<br>
+      <a href="mailto:hello@adrianvoss.dev">ardakersu@gmail.com
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero" style="padding-bottom:24px;">
+      <div class="eyebrow">03 — Music</div>
+      <h1>Recording as<br>Low Static</h1>
+      <p class="lede">
+        Slow electronic pieces built from tape hiss, field recordings,
+        and a stairwell with unreasonably good natural reverb.
+      </p>
+      <div class="signal" aria-hidden="true"></div>
+    </section>
+
+    <section style="padding-top:24px;">
+      <h2>Half-Light — EP · 2026</h2>
+      <div class="track-list" id="half-light">
+        <div class="track">
+          <div class="idx">01</div>
+          <div class="name">Stairwell<span class="release">Half-Light</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">4:12</div>
+        </div>
+        <div class="track">
+          <div class="idx">02</div>
+          <div class="name">Half-Light<span class="release">Half-Light</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">3:47</div>
+        </div>
+        <div class="track">
+          <div class="idx">03</div>
+          <div class="name">Static Bloom<span class="release">Half-Light</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">5:03</div>
+        </div>
+        <div class="track">
+          <div class="idx">04</div>
+          <div class="name">Tape Room, Empty<span class="release">Half-Light</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">6:21</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <h2>Earlier releases</h2>
+      <div class="track-list" id="earlier">
+        <div class="track">
+          <div class="idx">01</div>
+          <div class="name">Ceiling Height<span class="release">Interiors, 2024</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">4:55</div>
+        </div>
+        <div class="track">
+          <div class="idx">02</div>
+          <div class="name">Quiet Circuit<span class="release">Interiors, 2024</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">3:30</div>
+        </div>
+        <div class="track">
+          <div class="idx">03</div>
+          <div class="name">Low Static (Reprise)<span class="release">Singles, 2022</span></div>
+          <div class="wave" data-bars="14"></div>
+          <div class="dur">2:58</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="page-footer">
+  © 2026 Arda Kersü.
+</footer>
+
+<script>
+  // Render each .wave as a small static bar chart standing in for a waveform.
+  document.querySelectorAll('.wave').forEach(function (el) {
+    var count = parseInt(el.dataset.bars || '14', 10);
+    for (var i = 0; i < count; i++) {
+      var bar = document.createElement('i');
+      var h = 4 + Math.round(Math.abs(Math.sin(i * 1.7 + count)) * 16);
+      bar.style.height = h + 'px';
+      el.appendChild(bar);
+    }
+  });
+</script>
+
+</body>
+</html>

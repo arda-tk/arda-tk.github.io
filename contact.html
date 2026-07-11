@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Arda Kersü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="mark">A<span>.</span>V</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="papers.html">Papers</a>
+    <a href="music.html">Music</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</div>
+
+<div class="shell">
+  <aside class="spine">
+    <div class="spine-top">
+      <a href="index.html" class="mark">Arda<span>Kersü</span></a>
+      <nav class="spine-nav">
+        <a href="index.html"><span class="idx">00</span>Home</a>
+        <a href="projects.html"><span class="idx">01</span>Projects</a>
+        <a href="papers.html"><span class="idx">02</span>Papers</a>
+        <a href="music.html"><span class="idx">03</span>Music</a>
+        <a href="contact.html" class="active"><span class="idx">04</span>Contact</a>
+      </nav>
+    </div>
+    <div class="spine-bottom">
+      İzmir, Turkey<br>
+      <a href="mailto:hello@adrianvoss.dev">ardakersu@gmail.com</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero" style="padding-bottom:24px;">
+      <div class="eyebrow">04 — Contact</div>
+      <h1>Say hello</h1>
+      <p class="lede">
+        For research collaborations, speaking, or just to talk about
+        tape machines — drop a line. I read everything, I just reply slowly.
+      </p>
+      <div class="signal" aria-hidden="true"></div>
+    </section>
+
+    <section style="padding-top:24px;">
+      <div class="contact-grid">
+        <div>
+          <h2>Send a message</h2>
+          <form id="contact-form" action="mailto:hello@adrianvoss.dev" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send message</button>
+          </form>
+        </div>
+
+        <div>
+          <h2>Elsewhere</h2>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:hello@adrianvoss.dev">ardakersu@gmail.com</a></li>
+            <li><span>GitHub</span><a href="#">github.com/ardakersu</a></li>
+            <li><span>Scholar</span><a href="#">scholar.google.com/ardakersu</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="page-footer">
+  © 2026 Arda Kersü.
+</footer>
+
+</body>
+</html>
